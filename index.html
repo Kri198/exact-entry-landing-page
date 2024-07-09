@@ -9,18 +9,60 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
+            background-color: #f4f4f4;
         }
         h1 {
             color: #2c3e50;
+            margin-bottom: 20px;
         }
         p {
             color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            margin-top: 30px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            color: #fff;
+            background: #2c3e50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #34495e;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Exact Entry</h1>
-    <p>Precision Delivered</p>
-    <p>Your trusted partner for top-notch data entry and administrative services.</p>
+    <div class="container">
+        <h1>Welcome to Exact Entry</h1>
+        <p><strong>Precision Delivered</strong></p>
+        <p>Your trusted partner for top-notch data entry and administrative services.</p>
+        <p>At Exact Entry, we specialize in delivering accurate, efficient, and reliable solutions tailored to meet your business needs. Let us help streamline your operations and ensure data integrity.</p>
+        
+        <h2>Stay Updated</h2>
+        <p>Sign up to receive updates and special offers:</p>
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
 </body>
 </html>
