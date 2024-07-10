@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exact Entry - Precision Delivered</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             text-align: center;
             padding: 50px;
-            background-color: #f4f4f4;
+            background-image: url('https://images.pexels.com/photos/1714205/pexels-photo-1714205.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
         }
         h1 {
-            color: #2c3e50;
+            color: #ffffff;
             margin-bottom: 20px;
+            font-size: 36px;
+            animation: fadeInDown 1s ease-out;
         }
         p {
-            color: #7f8c8d;
+            color: #f0f0f0;
             margin-bottom: 20px;
+            font-size: 18px;
         }
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background: #fff;
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
         }
         form {
             margin-top: 30px;
@@ -36,21 +44,36 @@
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
         input[type="submit"] {
             padding: 10px 20px;
             color: #fff;
-            background: #2c3e50;
+            background: #3498db;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background 0.3s ease;
         }
         input[type="submit"]:hover {
-            background: #34495e;
+            background: #2980b9;
         }
         img {
             width: 150px;
             margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -65,10 +88,16 @@
         <h2>Stay Updated</h2>
         <p>Sign up to receive updates and special offers:</p>
         <p>Please provide your email address to view price and other information:</p>
-        <form action="https://formspree.io/f/xwpekgog" method="POST">
+        <form action="https://formspree.io/f/xwpekgog" method="POST" onsubmit="return showAlert()">
             <input type="email" name="email" placeholder="Enter your email address" required>
             <input type="submit" value="Subscribe">
         </form>
     </div>
+    <script>
+        function showAlert() {
+            alert("Thank you for subscribing!");
+            return true; // Return false to prevent form submission if needed
+        }
+    </script>
 </body>
 </html>
